@@ -1,0 +1,141 @@
+
+<view class="index">
+    <view class="location" bindtap="getCityNameOFLocation">
+  <image src="../../images/location.png" />
+</view >
+  <!-- 搜索框开始 -->
+  <SearchInput></SearchInput>
+  <!-- 搜索框结束 -->
+</view>
+
+<!--轮番图
+-->
+<view class="index_swiper">
+    <swiper autoplay="true" indicator-dots="true" circular="true">
+                <block wx:for="{{lunbo}}" wx:key="key">
+                    <swiper-item>
+                        <image class="carouselImg" src='{{item.image}}'></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+</view>
+
+<!--分类导航-->
+<view class="index_cates">
+    <navigator class="nav" url="/pages/deliveryList/list">
+        <image src="../../images/delivery.png"></image>
+        <text>快递</text>
+    </navigator>
+    <navigator class="nav" url="/pages/foodList/list">
+        <image src="../../images/food.png"></image>
+        <text>外卖</text>
+    </navigator>
+    <navigator class="nav" url="/pages/specialList/list">
+        <image src="../../images/special.png"></image>
+        <text>特产</text>
+    </navigator>
+    <navigator class="nav" url="/pages/lifeList/list">
+        <image src="../../images/advertise.png"></image>
+        <text>生活</text>
+    </navigator>
+</view>
+
+<!-- 代购搜索框 -->
+<view class="search_box">
+    <view class="box_1">
+<input type="text" placeholder="购买地" value='{{starAddr}}' bindinput="getStarAddr"/>
+<image src="../../images/duilian.png"></image>
+<input type="text" placeholder="目的地"  value='{{endAddr}}'bindinput="getEndAddr"/>
+    </view>
+    <view class="box_2">
+        <view class="date">我是您的小助手</view>
+        <image src="../../images/hua.png"></image>
+        <view class="date">求助啦</view>
+    </view>
+    <view class="box_3" bindtap="search">
+        <view class="text" >搜索</view>
+    </view>
+</view>
+
+<!-- 搜索内容 -->
+<view class="container" wx:if="{{goodList.length > 0}}">
+    <!-- 搜索到的内容 -->
+  <view>
+  <view class="search_kuangjia"> 
+<navigator class="search_result" wx:for="{{goodList.length}}" wx:key="index" url="../goodDetail/all/all?id={{item._id}}">
+    <view class="search_result_userInfo">
+    <view><image src="{{goodList[index].userImg}}"></image></view>
+    <view class="search_result_userInfo_name"> {{goodList[index].nickName}}</view>
+    </view>
+    <view class="search_result_right">
+    <view class="search_result_title">
+			{{goodList[index].content}}
+    </view>
+    <view class="search_result_moeny">{{goodList[index].price}}元</view>
+    <view class="search_result_address">
+        地址：  {{goodList[index].starAddr}}===>{{goodList[index].endAddr}}
+    </view>
+    <view class="search_result_time">
+    日期：   {{goodList[index].date}}
+    </view>
+    <view class="search_result_content">详情：  {{goodList[index].content}}</view>
+</view>
+    <view class="search_result_help">帮Ta买</view>
+    <view class="search_result_again">我也来</view>
+</navigator>
+      </view>
+  </view>
+  <!-- 底部动态，以免底部落空 -->
+  <view class="search_all_">
+ <navigator class="search_result" wx:for="{{array}}" wx:key="index" url="../goodDetail/all/all?id={{item._id}}">
+    <view class="search_result_userInfo">
+    <view><image src="{{item.userImg}}"></image></view>
+    <view class="search_result_userInfo_name"> {{item.nickName}}</view>
+    </view>
+    <view class="search_result_right">
+    <view class="search_result_title">
+        {{item.content}}
+    </view>
+    <view class="search_result_moeny">{{item.price}}元</view>
+    <view class="search_result_address">
+        地址：  {{goodList[index].starAddr}}===>{{goodList[index].endAddr}}
+    </view>
+    <view class="search_result_time">
+    日期：   星期五
+    </view>
+    <view class="search_result_content">详情：  {{item.content}}</view>
+</view>
+    <view class="search_result_help">帮Ta买</view>
+    <view class="search_result_again">我也来</view>
+ </navigator>
+</view>
+</view>
+
+<!-- 底部动态 -->
+<view class="search_all" wx:if="{{goodList.length == 0}}">
+ <navigator class="search_result" wx:for="{{array}}" wx:key="index" url="../goodDetail/all/all?id={{item._id}}">
+    <view class="search_result_userInfo">
+    <view><image src="{{item.userImg}}"></image></view>
+    <view class="search_result_userInfo_name"> {{item.nickName}}</view>
+    </view>
+    <view class="search_result_right" >
+    <view class="search_result_title">
+        {{item.content}}
+    </view>
+    <view class="search_result_moeny">{{item.price}}元</view>
+    <view class="search_result_address">
+        地址：  {{item.starAddr}}---》 {{item.endAddr}}
+    </view>
+    <view class="search_result_time">
+    日期：   星期五
+    </view>
+    <view class="search_result_content">详情：  {{item.content}}</view>
+</view>
+    <navigator class="search_result_help" url="../help/help?id={{item._id}}">帮Ta买</navigator>
+    <navigator class="search_result_again" url="../again/again?id={{item._id}}">我也来</navigator>
+ </navigator>
+</view>
+
+<view bindtap='setHelp'>
+      <image class="news_icon" src="../../images/up.png"></image>
+  </view>

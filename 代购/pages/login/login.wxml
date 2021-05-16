@@ -1,0 +1,25 @@
+
+<view class="box">
+			<view class="title">小代</view>
+			<view>
+				<view class="input">
+					<input type="text" name="" placeholder="Usernumb" bindinput="getUsernumb"/>
+        </view>
+				<view class="input">
+					<input type="password" name="" placeholder="Password"bindinput="getPassword"/>
+        </view>
+			<view class="log" bindtap="login">登录</view>
+				<view class="regist">
+					<navigator url="../register/register">注册</navigator>
+				</view>
+				<view class="forget">
+					<view bindtap="forget">忘记密码？</view>
+				</view>
+      </view>
+      
+			<view class="bottom">
+				<view>第三方登录</view>
+				<image src="../../images/qq.png "  />
+				<image src="../../images/wechat.png "  />
+      </view>
+    </view>

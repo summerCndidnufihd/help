@@ -1,0 +1,24 @@
+<view class="setNews">
+  <view class="setNews_1">
+    <image src="{{userInfo.avatarUrl}}"></image>
+		<view class="setNews_1_user">{{userInfo.nickName}}</view>
+  </view>
+    <view scroll-y="true" class="setNews_2">
+			<textarea class="setNews_2_text" value="{{content}}" placeholder="备注内容..." bindblur="getText"></textarea>
+			<textarea class="setNews_2_addr" value="{{starAddr}}" placeholder="购买地点..." bindblur="getStarAddr"></textarea>
+			<textarea class="setNews_2_addr" value="{{endAddr}}" placeholder="送达地点..." bindblur="getEndAddr"></textarea>
+			<textarea class="setNews_2_date" value="{{date}}" placeholder="时间..." bindblur="getDate"></textarea>
+			<textarea class="setNews_2_pri" value="{{price}}" placeholder="代购费：" bindblur="getPrice"></textarea>
+		</view>
+</view>
+	<!-- 单选框 -->
+	<radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</radio-group>
+<!-- 按钮 -->
+<view class="btn">
+<button class="yes" type="submit" bindtap="Send">发布</button>
+</view>
+

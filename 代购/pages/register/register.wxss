@@ -1,0 +1,60 @@
+.title{
+  font-size:60rpx;
+  color: white;
+  text-align: center;
+}
+.box{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width:400px;
+	height:70%;
+	padding:40px;
+	background:rgba(48, 48, 48, 204);/*设置透明*/
+	box-sizing:border-box;
+	box-shadow:0 15px 25px rgba(0, 0, 0, .5);
+	border-radius:10px;
+}
+
+.box h2{
+	margin-top:30px;
+	padding:0;
+	text-align:center;
+	color:white;
+}
+.box .input input{
+	color:white;
+	margin:10px;
+	width:100%;
+	padding:10px 0;
+	font-size:18px;
+	background:transparent;/*透明，与背景色一样*/
+	border:none;
+	border-bottom: 1px solid #fff;
+	outline:none;
+}
+.reg{
+  width: 200rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(224, 64, 152);
+}
+
+.box .bottom{
+	float:right;
+	width:100%;
+	height:20px;
+	color:#a8a3a3;
+	font-size:10px;
+	text-align:center;
+	margin-top:50px;
+}
+.box .bottom image{
+	width:30px;
+	height:30px;
+	text-align:center;
+}

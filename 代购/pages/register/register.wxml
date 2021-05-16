@@ -1,0 +1,25 @@
+
+<view class="box">
+			<view class="title">小代</view>
+			<view>
+				<view class="input">
+					<input type="text" name="" placeholder="Username" bindblur="getUsername"/>
+        </view>
+				<view class="input">
+					<input type="text" name="" placeholder="Usernumb" bindinput="getUsernumb"/>
+        </view>
+				<view class="input">
+					<input type="password" name="" placeholder="Password"bindinput="getPassword"/>
+        </view>
+				<view class="input">
+					<input type="text" name="" placeholder="Useremail"bindblur="getUseremail"/>
+        </view>
+			<view class="reg" bindtap="register">注册</view>
+      </view>
+      
+			<view class="bottom">
+				<view>第三方注册</view>
+				<image src="../../images/qq.png "  />
+				<image src="../../images/wechat.png "  />
+      </view>
+    </view>

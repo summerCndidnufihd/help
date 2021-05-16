@@ -1,0 +1,23 @@
+
+<!-- 搜索内容 -->
+<navigator class="search_result" wx:for="{{array}}" wx:key="index" url="../../goodDetail/delivery/delivery?id={{item._id}}">
+    <view class="search_result_userInfo">
+    <view><image src="{{item.userImg}}"></image></view>
+    <view class="search_result_userInfo_name"> {{item.nickName}}</view>
+    </view>
+    <view class="search_result_right">
+    <view class="search_result_title">
+        {{item.content}}
+    </view>
+    <view class="search_result_moeny">{{item.price}}元</view>
+    <view class="search_result_address">
+        地址：  {{item.starAddr}}---》 {{item.endAddr}}
+    </view>
+    <view class="search_result_time">
+    日期：   星期五
+    </view>
+    <view class="search_result_content">详情：  {{item.content}}</view>
+</view>
+    <view class="search_result_help">帮Ta买</view>
+    <view class="search_result_again">我也来</view>
+</navigator>

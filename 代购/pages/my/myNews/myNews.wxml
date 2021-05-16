@@ -1,0 +1,19 @@
+<view class="news_out" wx:for="{{array}}" wx:key="index" >
+  <view class="news_in_1">
+    <image src="{{item.userImg}}"></image>
+    <view class="news_in_1_text">
+      <view class="news_in_1_text_title">{{item.nickName}}</view>
+      <!-- <view class="news_in_1_text_address">屯蒙古城</view> -->
+    </view>
+    <!-- <view class="news_in_1_buy">代购</view> -->
+  </view>
+    <navigator class="news_in_2" url="../detail/detail?id={{item._id}}">
+      <view class="news_in_2_text">{{item.content}}</view>
+      <block class="news_in_2_image"  wx:for="{{item.fileIDs}}" wx:for-item="itemImg" wx:key="index">
+        <image class="img" src='{{itemImg}}' mode='aspectFill' data-img='{{[itemImg,item.fileIDs]}}' bindtap="previewImg"></image>
+      </block>
+    </navigator>
+  <view class="news_in_3">
+    <view class="postTime">2021-4-3 21:09</view>
+      </view>
+  </view>

@@ -1,0 +1,13 @@
+
+.cell-item{
+  display: flex;
+  height: 70rpx;
+  border-bottom: 1rpx solid #ddd;
+  padding: 20rpx 30rpx;
+}
+.cell-item .text{
+  width: 500rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+  font-size: 40rpx;
+}

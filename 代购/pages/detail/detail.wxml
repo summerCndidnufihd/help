@@ -1,0 +1,42 @@
+
+	<view class="all">
+	<view class="detail_userInfo">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="detail_userInfo_name">{{userInfo.nickName}}</view>
+    <view class="detail_userInfo_address">
+      <image src="../../images/location.png" ></image>
+      定位
+    </view>
+	</view>
+  <view class="detail_content">{{detail.content}}</view>
+  <!--pages/admin/addcats/addcats.wxml-->
+<view>
+  <view wx:for="{{[0,1,2]}}" wx:for-item="i">
+    <view style="flex-direction:row;display:flex;"><!-- 横排布局 -->
+      <view wx:for="{{images}}" wx:key="{{index}}" wx:for-index="index"><!-- 遍历数组 -->
+        <view wx:if="{{index>=i*3 && index<3*(i+1)}}" class="flex-item"><!-- 分段显示 -->
+          <image src="{{item}}" style="height:240rpx;width:240rpx;margin:5rpx"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+    <view class="news_in_3">
+        <view class="attention"><image bindtap="clickLove" src="{{loveUrl}}"></image></view>
+        <view class="toOthers"><image src="../../images/share.png"></image></view>
+        <view class="good" ><image bindtap="clickPraise" src="{{praiseUrl}}"></image></view>
+      </view>
+</view>
+<!-- 评论区 -->
+<view class="comments_block">留言评论</view>
+<block wx:for="{{comments}}" wx:key="index">
+  <view  class="comments_list" >
+    <text>{{item.name}}:    </text>
+    <text>{{item.content}}</text>
+  </view>
+</block>
+<!-- 发表评论 -->
+<scroll-view scroll-y="true"class="comments_input">
+<textarea  placeholder="请输入你的评论..." bindinput="getComments"></textarea>
+</scroll-view>
+<button bindtap="postComments">发表评论</button>

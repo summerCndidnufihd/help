@@ -1,0 +1,7 @@
+
+<view class="cell-item" >
+      <view class="text">消息通知</view>
+    </view>
+    <view class="cell-item">
+      <view class="text">隐私</view>
+    </view>

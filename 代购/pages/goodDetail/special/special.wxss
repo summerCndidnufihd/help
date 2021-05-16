@@ -1,0 +1,50 @@
+page{
+	background-color: rgb(235, 234, 232);
+}
+.all{
+	margin: 20rpx;
+}
+.detail_userInfo{
+  height: 100rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.detail_userInfo image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+.detail_userInfo_name{
+  height: 50rpx;
+	margin-top: 20rpx;
+	margin-left: 20rpx;
+  font-size: 40rpx;
+}
+.detail_content{
+	margin-top: 20rpx;
+	height: 400rpx;
+	font-size:40rpx ;
+	border: 1rpx solid #cecdcd;
+	background-color: white;
+}
+.detail_address{
+	height: 60rpx;
+	margin-top: 50rpx;
+	border-bottom: 1rpx solid #cecdcd;
+}
+.detail_date{
+	height: 60rpx;
+	margin-top: 30rpx;
+	border-bottom: 1rpx solid #cecdcd;
+}
+.detail_price{
+  margin-top: 20rpx;
+	margin-left: 250rpx;
+  width: 150rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	font-size: 40rpx;
+  text-align:center ;
+  border-radius: 20rpx;
+  background-color: rgb(245, 195, 130);
+}

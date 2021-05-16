@@ -1,0 +1,92 @@
+
+/* 搜索结果 */
+.search_result{
+  background-color: #eff1f1;
+  height: 370rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+}
+.search_result_right{
+  width: 540rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.search_result_userInfo image{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  border-radius: 65rpx;
+  width: 130rpx;
+  height: 130rpx;
+}
+.search_result_userInfo_name{
+  text-align: center;
+  font-size: 40rpx;
+}
+.search_result_title{
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 380rpx;
+  height: 80rpx;
+}
+.search_result_moeny{
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+  width: 100rpx;
+  height: 50rpx;
+  text-align:center ;
+  border-radius: 20rpx;
+  background-color: rgb(245, 195, 130);
+}
+.search_result_address{
+  margin-left: 20rpx;
+  width: 500rpx;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(107, 107, 107, 0.89);
+}
+.search_result_time{
+  margin-left: 20rpx;
+  width: 500rpx;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(107, 107, 107, 0.89);
+}
+.search_result_content{
+  margin-left: 20rpx;
+  height: 100rpx;
+  color: rgba(107, 107, 107, 0.89);
+}
+.search_result_help{
+  float: left;
+  width: 140rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-left:15rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  background-color: #88c0f5;
+}
+.search_result_again{
+  float: left;
+  width: 140rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-left:400rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  background-color: #88c0f5;
+}

@@ -1,0 +1,10 @@
+
+<view class="cell-item" >
+      <view class="text">修改账号</view>
+    </view>
+    <view class="cell-item">
+      <view class="text">修改密码</view>
+    </view>
+<view class="cell-item" >
+      <view class="text">绑定手机</view>
+    </view>

@@ -1,0 +1,17 @@
+
+.search_input{
+  height: 70rpx;
+  padding: 10rpx;
+  background-color: #bdddb4;
+}
+.nav{
+  width: 640rpx;
+  height: 100%;
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15rpx;
+  color: #666;
+}

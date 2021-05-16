@@ -1,0 +1,16 @@
+<view class="all">
+	<view class="detail_userInfo">
+    <image src="{{userInfo.avatarUrl}}"></image>
+		<view class="detail_userInfo_name">{{userInfo.nickName}}</view>
+		<view class="detail_price">
+		{{detail.price}}元
+	</view>
+	</view>
+	<view class="detail_content">{{detail.content}}</view>
+	<view class="detail_address">
+      地址： {{detail.starAddr}}---》 {{detail.endAddr}}
+		</view>
+	<view class="detail_date">
+		日期： {{detail.date}}
+	</view>
+</view>

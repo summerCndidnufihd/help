@@ -1,0 +1,64 @@
+<view class="setNews">
+  <view class="setNews_1">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="setNews_1_user">{{userInfo.nickName}}</view>
+    <view class="setNews_1_address">
+      <image src="../../images/location.png" ></image>
+      定位
+    </view>
+  </view>
+  
+    <!-- <scroll-view scroll-y="true" class="setNews_2">
+       <textarea class="setNews_2_text" value="{{content}}" placeholder="来分享一点呀..." bindinput="getInput"></textarea> 
+      <view class="setNews_2_img">
+      <view class="setNews_2_image" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <view class="setNews_2_image_img" wx:if="{{imgList.length==(index+1)&& imgList.length<8}}" bindtap="ChooseImage">
+          <image src="../../images/photo.png"></image>
+        </view>
+          <text>照片/视频</text>
+      </view>
+      <view class="setNews_2_getImg" wx:for='{{upLoadImg}}' wx:key="index">
+        <image src="{{item}}"></image>
+      </view>
+    </view>
+    </scroll-view> -->
+    <scroll-view scroll-y="true" class="setNews_2">
+      <textarea class="setNews_2_text" value="{{content}}" placeholder="来分享一点呀..." bindinput="getInput"></textarea>
+    </scroll-view>
+    <scroll-view scroll-y="true"class="setNews_2">
+  <!-- <view class="setNews_2_getImg" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+    <view wx:if="{{imgList.length==(index+1)&& imgList.length<8}}" class="upLoad-box" bindtap="ChooseImage">
+      <image class="photo" src="../../images/photo.png"></image>
+      <view><text>照片/视频</text></view>
+    </view>
+    <!-- 上传的图片 
+    <view wx:else class="imgItem" data-index="{{index}}">
+      <view><image class="img" src='{{item}}' mode='aspectFill'></image></view>
+      <view><image class="closeImg" bindtap="DeleteImg" src="../../images/close.png" data-index="{{index}}"></image></view>
+    </view>
+  </view> -->
+  
+<view>
+  <view wx:for="{{[0,1,2]}}" wx:for-item="i">
+    <view style="flex-direction:row;display:flex;"><!-- 横排布局 -->
+      <view class="setNews_2_getImg" wx:for="{{imgList}}" wx:key="{{index}}" wx:for-index="index"  bindtap="ViewImage"><!-- 遍历数组 -->
+      
+        <view wx:if="{{index>=i*3 && index<3*(i+1)}}" class="flex-item"><!-- 分段显示 -->
+          <view><image class="closeImg" bindtap="DeleteImg" src="../../images/close.png" data-index="{{index}}"></image></view>
+          <image src="{{item}}" mode='aspectFill'style="height:240rpx;width:240rpx;"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+      <!-- 点击上传框 -->
+      <view class="upLoad-box" wx:if="{{imgList.length>=0 && imgList.length < 8}}" bindtap="ChooseImage">
+    <image class="photo" src="../../images/photo.png"></image>
+    <view><text>照片/视频</text></view>
+  </view>
+</scroll-view>
+  </view>
+<!-- 按钮 -->
+  <button class="yes" bindtap="publish">发布</button>
+
+

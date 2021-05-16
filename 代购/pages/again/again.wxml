@@ -1,0 +1,19 @@
+
+<view class="setNews">
+  <view class="setNews_1">
+    <image src="{{userInfo.avatarUrl}}"></image>
+		<view class="setNews_1_user">{{userInfo.nickName}}</view>
+  </view>
+    <view scroll-y="true" class="setNews_2">
+			<view class="setNews_2_text" >详情： {{detail.content}}</view>
+			<view class="setNews_2_addr" >初始地点： {{detail.starAddr}}</view>
+			<textarea class="setNews_2_addr" value="{{endAddr}}" placeholder="送达地点..." bindblur="getEndAddr"></textarea>
+			<textarea class="setNews_2_date" value="{{date}}" placeholder="时间..." bindblur="getDate"></textarea>
+			<view class="setNews_2_pri" >价格： {{detail.price}}</view>
+		</view>
+</view>
+<!-- 按钮 -->
+<view class="btn">
+<button class="yes" type="submit" bindtap="Send">发布</button>
+</view>
+

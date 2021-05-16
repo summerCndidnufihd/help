@@ -1,0 +1,34 @@
+
+  <view class="search">
+    <view class="search_input">
+      <input class="search_input2" placeholder=' 搜索您需要的...' value='{{searchVal}}' bindconfirm="search" bindinput="input"></input>
+      <image class="search_clear"  wx:if="{{ searchVal != '' }}" catchtap="clear" src="../../images/close.png"></image>
+    </view>
+    <image class="search_image" src="../../images/search.png" catchtap="search"></image>
+  </view>
+  <scroll-view class="search_scroll" scroll-y="true">
+  <view class="search_kuangjia"> 
+<navigator class="search_result" wx:for="{{goodList.length}}" wx:key="index" url="../goodDetail/all/all?id={{goodList[index].id}}">
+    <view class="search_result_userInfo">
+    <view><image src="{{goodList[index].userImg}}"></image></view>
+    <view class="search_result_userInfo_name"> {{goodList[index].nickName}}</view>
+    </view>
+    <view class="search_result_right">
+    <view class="search_result_title">
+			{{goodList[index].content}}
+    </view>
+    <view class="search_result_moeny">{{goodList[index].price}}元</view>
+    <view class="search_result_address">
+        地址：  {{goodList[index].starAddr}}---》{{goodList[index].endAddr}}
+    </view>
+    <view class="search_result_time">
+    日期：   {{goodList[index].date}}
+    </view>
+    <view class="search_result_content">详情：  {{goodList[index].content}}</view>
+</view>
+    <view class="search_result_help">帮Ta买</view>
+    <view class="search_result_again">我也来</view>
+</navigator>
+</view>
+  </scroll-view>
+

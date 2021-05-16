@@ -1,0 +1,72 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/mine/mine",
+		"pages/square/square",
+		"pages/setNews/setNews",
+		"pages/search/search",
+		"pages/login/login",
+		"pages/register/register",
+		"pages/deliveryList/list",
+		"components/SearchInput/SearchInput",
+		"pages/detail/detail",
+		"pages/setHelp/setHelp",
+		"pages/foodList/list",
+		"pages/specialList/list",
+		"pages/lifeList/list",
+		"pages/again/again",
+		"pages/help/help",
+		"pages/my/collect/collect",
+		"pages/my/myNews/myNews",
+		"pages/my/myBuy/myBuy",
+		"pages/goodDetail/all/food/all",
+		"pages/goodDetail/food/food",
+		"pages/goodDetail/all/all",
+		"pages/goodDetail/delivery/delivery",
+		"pages/goodDetail/special/special",
+		"pages/goodDetail/life/life",
+		"pages/my/myOrder/order",
+		"pages/my/make/make",
+		"pages/my/userNumManager/userNumManager",
+		"pages/my/question/question"
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "请确认授权"
+		}
+	},
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#BDDDB4",
+		"navigationBarTitleText": "小代",
+		"navigationBarTextStyle": "black"
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json",
+	"tabBar": {
+		"color": "white",
+		"selectedColor": "#0000",
+		"borderStyle": "black",
+		"backgroundColor": "#BDDDB4",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "images/首页.png",
+				"selectedIconPath": "images/首页1.png"
+			},
+			{
+				"pagePath": "pages/square/square",
+				"text": "广场",
+				"iconPath": "images/广场.png",
+				"selectedIconPath": "images/广场1.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "images/我的.png",
+				"selectedIconPath": "images/我的1.png"
+			}
+		]
+	}
+}
