@@ -23,6 +23,10 @@
       <image src="../../images/order.png"></image>
       <view class="text">我的订单</view>
     </navigator>
+    <navigator class="cell-item" url="../my/myOrder/order">
+      <image src="../../images/order.png"></image>
+      <view class="text">git测试</view>
+    </navigator>
     <navigator class="cell-item" url="../my/myBuy/myBuy">
       <image src="../../images/buy.png"></image>
       <view class="text">我的代购</view>
